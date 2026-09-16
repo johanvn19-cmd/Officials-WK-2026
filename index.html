@@ -161,7 +161,7 @@ function renderWhatsAppGroups(){
   if(selectedAudiences.includes('MAG')||selectedAudiences.includes('MTC'))groups.push({name:'MAG Officials WCAG Rotterdam 2026',url:'https://chat.whatsapp.com/GlAunw1o8whIlYuMvx0IKV'});
   if(selectedAudiences.includes('WAG')||selectedAudiences.includes('WTC'))groups.push({name:'WAG Officials WCAG Rotterdam 2026',url:'https://chat.whatsapp.com/IugNbPBvrs7Ad8NBHnmVW6'});
   summary.textContent='';
-  root.innerHTML=groups.length?groups.map(group=>`<div class="setting" onclick="window.open('${group.url}','_blank','noopener,noreferrer')"><span><b>${group.name}</b></span><b>›</b></div>`).join(''):'<div class="setting"><span><small>Geen formulier beschikbaar voor de geselecteerde doelgroep.</small></span></div>';
+  root.innerHTML=groups.length?groups.map(group=>`<div class="setting" onclick="window.open('${group.url}','_blank','noopener,noreferrer')"><span><b>${group.name}</b></span><b>›</b></div>`).join(''):'<div class="setting"><span><small>Geen whatsapp groep beschikbaar voor de geselecteerde doelgroep.</small></span></div>';
 }
 function toggleWhatsAppGroups(){
   renderWhatsAppGroups();
