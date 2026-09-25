@@ -1,0 +1,637 @@
+
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Rotterdam 2026 Officials</title>
+<style>
+:root{--navy:#071b3b;--navy2:#12325f;--orange:#ff6500;--blue:#0baee8;--mint:#13bfae;--yellow:#ffc83d;--purple:#8d62db;--bg:#edf2f7;--white:#fff;--text:#14223a;--muted:#66758d;--line:#dce4ed;--shadow:0 10px 28px rgba(7,27,59,.13)}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--text);background:#cbd5df}button,input{font:inherit}.app{width:100%;max-width:520px;min-height:100vh;margin:auto;background:var(--bg);padding-bottom:calc(82px + env(safe-area-inset-bottom))}.screen{display:none}.screen.active{display:block}.header{background:linear-gradient(140deg,var(--navy),var(--navy2));color:#fff;padding:62px 20px 25px;position:relative;overflow:hidden}.header-logo{position:absolute;top:10px;left:10px;width:clamp(180px, 70vw, 420px);height:auto;display:block;z-index:2}.header:after{content:"";position:absolute;width:190px;height:80px;background:var(--orange);right:-105px;top:-18px;transform:rotate(-22deg)}.brand{font-weight:950;letter-spacing:.08em;font-size:17px;position:relative;z-index:1; top:18px}.brand span{color:var(--orange)}.content{padding:16px}.hero{background:var(--navy);color:#fff;padding:21px;border-radius:22px;box-shadow:var(--shadow);cursor:pointer}.eyebrow{font-size:11px;letter-spacing:.12em;font-weight:900;text-transform:uppercase;opacity:.72}.hero h2{font-size:24px;margin:9px 0}.time{font-size:28px;font-weight:950}.place{margin-top:7px;font-weight:650}.between{display:flex;align-items:center;justify-content:space-between;gap:10px}.section-title{margin:21px 2px 9px;font-size:14px;font-weight:950}.badge,.chip{display:inline-flex;align-items:center;border-radius:99px;font-size:11px;font-weight:900;padding:7px 10px}.badge{background:#e7eef5;margin:2px}.badge.active{background:var(--orange);color:#fff}.status{background:#dcf7ed;color:#087453}.card{position:relative;background:#fff;border-radius:17px;padding:15px 96px 15px 15px;margin:10px 0;box-shadow:0 4px 16px rgba(7,27,59,.08);border-left:5px solid var(--blue);cursor:pointer;min-height:106px}.card.transport{border-color:var(--mint)}.card.competition{border-color:var(--orange)}.card.food{border-color:var(--yellow)}.card.other{border-color:var(--purple)}.card h3{margin:5px 0 7px;font-size:16px}.small{font-size:12px;color:var(--muted)}.dates,.filters{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}.dates{padding:14px 16px 8px}.filters{padding:11px 16px;background:#fff}.date,.chip{border:0;cursor:pointer;white-space:nowrap}.date{min-width:67px;border-radius:14px;padding:10px;background:#fff;color:var(--text);font-weight:850}.date small{display:block;font-weight:600}.date.on{background:var(--orange);color:#fff}.chip{background:#e7edf3}.chip.on{background:var(--navy);color:#fff}.setting{background:#fff;padding:17px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;cursor:pointer}.more-heading{background:#e7edf3;color:var(--navy);padding:10px 17px;font-size:12px;font-weight:950;letter-spacing:.06em;text-transform:uppercase}.submenu{display:none}.submenu.show{display:block}.submenu .setting{padding-left:31px}.submenu-arrow{transition:transform .2s ease}.submenu-arrow.open{transform:rotate(90deg)}.pdf-screen{height:100vh;height:100dvh;background:#fff;padding-bottom:0}.pdf-head{display:flex;align-items:center;gap:14px;background:var(--navy);color:#fff;padding:calc(14px + env(safe-area-inset-top)) 16px 14px}.pdf-head h1{margin:0;font-size:20px}.floorplan-screen{height:100vh;height:100dvh;background:#fff;padding-bottom:0}.floorplan-toolbar{display:flex;align-items:center;gap:6px;padding:8px;background:#eef3f7;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}.floorplan-toolbar::-webkit-scrollbar{display:none}.zoom-button,.floor-button{height:40px;border:0;border-radius:11px;font-weight:950;cursor:pointer;white-space:nowrap}.zoom-button{min-width:42px;background:var(--navy);color:#fff;font-size:21px}.zoom-button.fit{padding:0 12px;font-size:12px}.zoom-level{min-width:48px;text-align:center;font-size:11px;font-weight:900;color:var(--navy)}.floor-button{padding:0 12px;background:#fff;color:var(--navy);border:2px solid var(--navy);font-size:12px}.floor-button.active{background:var(--orange);border-color:var(--orange);color:#fff}.zoom-button:active,.floor-button:active{transform:scale(.96)}.floorplan-touch-hint{text-align:center;padding:5px 10px;background:#fff;color:var(--muted);font-size:11px;font-weight:700}.floorplan-viewer{height:calc(100vh - 143px - env(safe-area-inset-top));height:calc(100dvh - 143px - env(safe-area-inset-top));overflow:auto;background:#dfe6ed;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;touch-action:none}.floorplan-stage{position:relative;min-width:100%;min-height:100%;display:flex;align-items:center;justify-content:center}.floorplan-image{display:block;max-width:none;height:auto;user-select:none;-webkit-user-select:none;-webkit-user-drag:none;transform-origin:top left}.floorplan-error{display:none;padding:32px 20px;text-align:center;color:#a63a00;background:#fff2df;font-weight:800}.floorplan-error.show{display:block}@media(max-width:390px){.floorplan-toolbar{gap:4px;padding:6px}.zoom-button{min-width:38px}.zoom-button.fit,.floor-button{padding:0 9px}.zoom-level{min-width:42px}}.nav{position:fixed;z-index:50;left:50%;bottom:0;transform:translateX(-50%);width:100%;max-width:520px;height:calc(72px + env(safe-area-inset-bottom));padding-bottom:env(safe-area-inset-bottom);background:#fff;border-top:1px solid var(--line);display:flex;box-shadow:0 -7px 22px rgba(7,27,59,.08)}.nav button{flex:1;border:0;background:#fff;color:#748096;font-size:11px;font-weight:800;cursor:pointer}.nav button b{display:block;font-size:22px;margin-bottom:3px}.nav button.on{color:var(--orange)}.detail-head{background:var(--navy);color:#fff;padding:20px 20px 31px}.detail-head h1{font-size:27px;margin:24px 0 10px}.back{border:0;background:transparent;color:#fff;padding:0;font-weight:900;cursor:pointer}.block{background:#fff;border-radius:18px;padding:17px;margin:12px 16px}.primary,.secondary{width:100%;border:0;border-radius:14px;padding:14px;font-weight:900;margin-top:10px;cursor:pointer}.primary{background:var(--orange);color:#fff}.secondary{background:#e7edf3;color:var(--navy)}.empty{text-align:center;padding:42px 22px;color:var(--muted)}.overlay{position:fixed;z-index:100;inset:0;background:rgba(7,27,59,.68);display:none;align-items:flex-end;justify-content:center}.overlay.show{display:flex}.language-overlay{z-index:250;align-items:center;padding:18px}.language-overlay .sheet{border-radius:26px;max-width:420px;padding-bottom:23px}.language-choice{font-size:16px}.sheet{width:100%;max-width:520px;max-height:90vh;overflow:auto;background:#fff;border-radius:26px 26px 0 0;padding:23px 20px calc(22px + env(safe-area-inset-bottom))}.sheet h2{margin:0 0 7px}.role{display:flex;justify-content:space-between;align-items:center;padding:14px;border:1px solid var(--line);border-radius:14px;margin:8px 0;cursor:pointer}.check{width:24px;height:24px;border-radius:7px;background:#e7edf3;position:relative}.role.selected{border-color:var(--orange);background:#fff7f1}.role.selected .check{background:var(--orange)}.role.selected .check:after{content:"✓";color:#fff;font-weight:950;position:absolute;left:5px;top:1px}.warning{display:none;background:#fff2df;color:#8a4c00;border-radius:12px;padding:11px;margin:10px 0;font-size:13px}.warning.show{display:block}.summary{font-size:12px;color:var(--muted)}.favorite-card{position:relative;padding-bottom:58px}.favorite-remove{position:absolute;right:12px;bottom:12px;width:40px;height:40px;border:0;border-radius:50%;padding:0;background:#fff0eb;color:#a63a00;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 10px rgba(7,27,59,.14)}.favorite-remove:active{transform:scale(.95)}.favorite-remove svg{width:19px;height:19px;pointer-events:none}.favorite-date{margin:22px 2px 8px;font-size:13px;font-weight:950;color:var(--navy);text-transform:uppercase}.favorite-count{display:inline-flex;min-width:18px;height:18px;padding:0 5px;align-items:center;justify-content:center;border-radius:99px;background:var(--orange);color:#fff;font-size:10px;margin-left:3px;vertical-align:top}.card-main{min-width:0}.card-side{position:absolute;right:12px;top:12px;bottom:12px;width:auto;min-width:90px;display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;text-align:right}.card-side .eyebrow{max-width:90px}.card-audiences{display:flex;justify-content:flex-end;align-items:center;flex-wrap:nowrap;gap:4px;white-space:nowrap}.favorite-toggle{border:0;background:transparent;color:#aab5c5;font-size:19px;line-height:1;font-weight:900;cursor:pointer;padding:2px 3px;min-width:28px;min-height:28px;display:flex;align-items:center;justify-content:center}.favorite-toggle.active{color:var(--orange)}.favorite-toggle:active{transform:scale(.88)}.favorite-toggle:focus-visible{outline:2px solid var(--orange);outline-offset:2px;border-radius:4px}.hero{position:relative;padding-right:58px}.hero .favorite-toggle{position:absolute;right:18px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.72);font-size:21px}.hero .favorite-toggle.active{color:var(--orange)}.hero .favorite-toggle:active{transform:translateY(-50%) scale(.88)}
+</style>
+</head>
+<body>
+<div class="app">
+<section id="home" class="screen active">
+<header class="header"><img src="Logo_horizontal_AGWC26.png" alt="AGWC 2026" class="header-logo"><div class="brand">Vandaag <span></span></div></header>
+<main class="content" id="homeContent"></main>
+</section>
+<section id="program" class="screen">
+<header class="header"><img src="Logo_horizontal_AGWC26.png" alt="AGWC 2026" class="header-logo"><div class="brand">PROGRAMMA</div></header>
+<div class="dates" id="dateSelector"></div>
+<div class="filters"><button class="chip on" data-type="all">Alles</button><button class="chip" data-type="Competition">Wedstrijd</button><button class="chip" data-type="Meetings">Meeting</button><button class="chip" data-type="Transport">Transport</button><button class="chip" data-type="Food">Eten</button></div>
+<main class="content" id="schedule"></main>
+</section>
+<section id="favorites" class="screen">
+<header class="header"><img src="Logo_horizontal_AGWC26.png" alt="AGWC 2026" class="header-logo"><div class="brand">FAVORIETEN</div></header>
+<main class="content" id="favoritesContent"></main>
+</section>
+<section id="more" class="screen">
+<header class="header"><img src="Logo_horizontal_AGWC26.png" alt="AGWC 2026" class="header-logo"><div class="brand">MEER</div></header>
+<main>
+<div class="setting" onclick="openAudiencePicker()"><span><b>Mijn doelgroepen</b><br><small id="audienceSetting">Nog niet gekozen</small></span><b>›</b></div>
+<div class="setting" onclick="openLanguagePicker()" role="button" tabindex="0"><span><b>Taal</b><br><small id="languageSetting">Nederlands</small></span><b>›</b></div>
+<div class="setting" id="whatsappToggle" onclick="toggleWhatsAppGroups()" role="button" aria-expanded="false" aria-controls="whatsappGroups"><span><b>Whatsapp groep</b><br><small id="whatsappSummary">Toon beschikbare groepen</small></span><b class="submenu-arrow" id="whatsappArrow">›</b></div>
+<div class="submenu" id="whatsappGroups"></div>
+<div class="setting" onclick="openPdfViewer()"><span><b>Busschema's</b><br><small> </small></span><b>›</b></div>
+<div class="setting" onclick="openFloorPlan()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openFloorPlan()}" aria-label="Open plattegronden"><span><b>Plattegronden</b><br><small>Bekijk Floor 0 en Floor 1</small></span><b>›</b></div>
+<div class="setting" id="judgesDayOutToggle" onclick="toggleJudgesDayOut()" role="button" aria-expanded="false" aria-controls="judgesDayOutGroups"><span><b>Judges Day Out</b><br><small id="judgesDayOutSummary">Toon beschikbare formulieren</small></span><b class="submenu-arrow" id="judgesDayOutArrow">›</b></div>
+<div class="submenu" id="judgesDayOutGroups"></div>
+</main>
+</section>
+<section id="pdfviewer" class="screen floorplan-screen" aria-labelledby="busTitle">
+<div class="pdf-head"><button class="back" type="button" onclick="closePdfViewer()">← Terug</button><h1 id="busTitle">Busschema's</h1></div>
+<div class="floorplan-toolbar" aria-label="Zoomknoppen voor het busschema">
+<button class="zoom-button" type="button" onclick="zoomBusImage(-1)" aria-label="Uitzoomen">−</button>
+<span class="zoom-level" id="busZoomLevel" aria-live="polite">Passend</span>
+<button class="zoom-button" type="button" onclick="zoomBusImage(1)" aria-label="Inzoomen">+</button>
+<button class="zoom-button fit" type="button" onclick="fitBusImage()">Passend</button>
+</div>
+<div class="floorplan-touch-hint">Gebruik twee vingers om in of uit te zoomen en één vinger om te verplaatsen</div>
+<div class="floorplan-viewer" id="busViewer">
+<div class="floorplan-stage" id="busStage">
+<img class="floorplan-image" id="busImage" src="./Busschema juryleden.jpg" alt="Busschema juryleden" draggable="false" loading="eager" decoding="async" onload="initializeBusImage()" onerror="showBusImageError()">
+<div class="floorplan-error" id="busImageError" role="alert"></div>
+</div>
+</div>
+</section>
+<section id="floorplan" class="screen floorplan-screen" aria-labelledby="floorplanTitle">
+<div class="pdf-head"><button class="back" type="button" onclick="closeFloorPlan()">← Terug</button><h1 id="floorplanTitle">Plattegrond</h1></div>
+<div class="floorplan-toolbar" aria-label="Plattegrond- en zoomknoppen">
+<button class="zoom-button" type="button" onclick="zoomFloorPlan(-1)" aria-label="Uitzoomen">−</button>
+<span class="zoom-level" id="floorplanZoomLevel" aria-live="polite">Passend</span>
+<button class="zoom-button" type="button" onclick="zoomFloorPlan(1)" aria-label="Inzoomen">+</button>
+<button class="zoom-button fit" type="button" onclick="fitFloorPlan()">Passend</button>
+<button class="floor-button active" id="floorButton0" type="button" onclick="selectFloorPlan(0)" aria-pressed="true">Floor 0</button>
+<button class="floor-button" id="floorButton1" type="button" onclick="selectFloorPlan(1)" aria-pressed="false">Floor 1</button>
+</div>
+<div class="floorplan-touch-hint">Gebruik twee vingers om in of uit te zoomen en één vinger om te verplaatsen</div>
+<div class="floorplan-viewer" id="floorplanViewer">
+<div class="floorplan-stage" id="floorplanStage">
+<img class="floorplan-image" id="floorplanImage" src="./WCAG-A1-Floor-0.png" alt="Plattegrond Floor 0" draggable="false" loading="eager" decoding="async" onload="initializeFloorPlan()" onerror="showFloorPlanError()">
+<div class="floorplan-error" id="floorplanError" role="alert"></div>
+</div>
+</div>
+</section>
+<section id="detail" class="screen"><div class="detail-head"><button class="back" onclick="goBack()">← Terug</button><div class="eyebrow" id="detailType" style="margin-top:24px"></div><h1 id="detailTitle"></h1><div id="detailTime"></div></div><div class="block"><div class="eyebrow" style="color:var(--muted)">Locatie</div><h3 id="detailLocation"></h3></div><div class="block"><div class="eyebrow" style="color:var(--muted)">Relevant voor</div><div id="detailAudience"></div><button class="primary" id="favoriteButton" type="button">☆ Toevoegen aan favorieten</button></div></section><nav class="nav" id="nav"><button class="on" data-page="home" onclick="navigate('home')"><b>⌂</b>Nu</button><button data-page="program" onclick="navigate('program')"><b>≡</b>Programma</button><button data-page="favorites" onclick="navigate('favorites')"><b>★<span class="favorite-count" id="favoriteCount">0</span></b>Favorieten</button><button data-page="more" onclick="navigate('more')"><b>•••</b>Meer</button></nav>
+</div>
+<div class="overlay" id="audienceOverlay"><div class="sheet"><div class="between"><div><h2>Kies je doelgroepen</h2><div class="summary">Selecteer minimaal één groep om relevante activiteiten te zien.</div></div></div><div class="warning" id="audienceWarning">Kies minimaal één doelgroep.</div><div id="roleList"></div><button class="primary" onclick="saveAudiences()">Toon mijn programma</button><button class="secondary" onclick="selectAllAudiences()">Selecteer alles</button></div></div>
+<div class="overlay language-overlay" id="languageOverlay" role="dialog" aria-modal="true" aria-labelledby="languageTitle">
+  <div class="sheet">
+    <h2 id="languageTitle">Select Language / Kies taal</h2>
+    <div class="summary">Choose your preferred language / Kies je voorkeurstaal</div>
+    <button class="primary language-choice" type="button" onclick="setLanguage('en')">English</button>
+    <button class="secondary language-choice" type="button" onclick="setLanguage('nl')">Nederlands</button>
+  </div>
+</div><script>
+'use strict';
+/* DATASETSTATUS: het volledige Excel-schema van 11 t/m 27 oktober is nog niet beschikbaar in de aangeleverde bestanden. Vervang de onderstaande voorbeeldgegevens pas nadat het echte Excel-bestand is toegevoegd; geen activiteiten of tijden zijn verzonnen. */
+const L={F:'FOP',J:'Ahoy · Judges Room',JL:'Ahoy · Judges Lounge',M:'Ahoy · MTC Room',W:'Ahoy · WTC Room',D:'Ahoy · DOC 3',H:'WG Hotel · Hilton',S:'Judges Hotel · SS Rotterdam',HA:'Hilton → Ahoy',AH:'Ahoy → Hilton',SA:'SS Rottterdam → Ahoy',AS:'Ahoy → SS Rotterdam',HS:'Hilton → SS Rotterdam',SH:'SS Rotterdam → Hilton'};
+const T={T:'Transport',M:'Meetings',C:'FINALS',Q:'QUALIFICATION',P:'PODIUM TRAINING',F:'Food',O:'Other activities'};
+const rows=[
+
+['2026-10-11','','','arrival of the MTC','H','T','MTC'],
+['2026-10-12','','','arrival of the WTC','H','T','WTC'],
+['2026-10-12','','','arrival of the MAG D-Judges','S','T','MAG'],
+['2026-10-12','09:15','09:55','Transport MTC','HA','T','MTC'],
+['2026-10-12','10:00','18:00','MTC Meeting','M','M','MTC'],
+['2026-10-12','18:00','18:40','Transport MTC','AH','T','MTC'],
+['2026-10-13','','','arrival WAG D-Judges','S','T','WAG'],
+['2026-10-13','08:45','09:25','transport MTC','HA','T','MTC'],
+['2026-10-13','09:30','12:30','MTC Meeting','M','M','MTC'],
+['2026-10-13','09:15','09:55','transport WTC','HA','T','WTC'],
+['2026-10-13','10:00','18:00','WTC Meeting','W','M','WTC'],
+['2026-10-13','13:25','13:50','transport MAG D-Judges','SA','T','MAG'],
+['2026-10-13','14:00','18:00','Meeting with MAG D-Judges','J','M','MAG,MTC'],
+['2026-10-13','18:00','18:40','transport MTC','AH','T','MTC'],
+['2026-10-13','18:00','18:40','transport WTC','AH','T','WTC'],
+['2026-10-13','18:00','18:25','transport MAG D-Judges','AS','T','MAG'],
+['2026-10-13','19:00','20:00','Orientation Meeting','D','M','MAG,WAG,FIG,MTC,WTC'],
+['2026-10-13','20:00','21:00','Heads of Delegation Welcome Reception','D','M','MAG,WAG,FIG'],
+['2026-10-13','21:00','21:40','Transport TC presidents','AH','T','MAG,WAG'],
+['2026-10-14','08:20','08:45','transport MAG D-Judges','SA','T','MAG'],
+['2026-10-14','08:05','08:45','transport MTC','HA','T','MTC'],
+['2026-10-14','08:45','09:25','transport WTC','HA','T','WTC'],
+['2026-10-14','09:00','09:30','MAG D-Judges Briefing','J','M','MAG,MTC'],
+['2026-10-14','09:30','12:30','WTC Meeting ','W','M','WTC'],
+['2026-10-14','10:00','11:50','MAG - Subdivison 1','F','P','MAG'],
+['2026-10-14','11:50','12:10','Break MAG','JL','F','MAG'],
+['2026-10-14','10:00','11:00','Medical & Mental Health Emergency (Action) Plans meeting','J','M','FIG'],
+['2026-10-14','12:10','14:00','MAG - Subdivison 2','F','P','MAG'],
+['2026-10-14','13:25','13:50','transport WAG D-Judges','SA','T','WAG'],
+['2026-10-14','14:00','16:00','Lunch MAG D-judges + MTC','JL','F','MAG,MTC'],
+['2026-10-14','14:00','16:30','Meeting with WAG D-Judges','J','M','WAG,WTC'],
+['2026-10-14','16:00','17:50','MAG - Subdivison 3','F','P','MAG'],
+['2026-10-14','17:50','18:10','Diner MAG D-judges + MTC','JL','F','MAG,MTC'],
+['2026-10-14','16:30','17:10','transport WTC','AH','T','WTC'],
+['2026-10-14','16:30','17:55','transport WAG D-Judges','AS','T','WAG'],
+['2026-10-14','18:10','20:00','MAG - Subdivison 4','F','P','MAG'],
+['2026-10-14','20:00','20:40','transport MTC','AH','T','MTC'],
+['2026-10-14','20:00','20:25','transport MAG D-Judges','AS','T','MAG'],
+['2026-10-15','08:20','08:45','transport MAG D-Judges','SA','T','MAG'],
+['2026-10-15','08:05','08:45','transport MTC','HA','T','MTC'],
+['2026-10-15','09:00','09:30','MAG D-Judges Briefing','J','M','MAG,MTC'],
+['2026-10-15','09:15','09:55','transport WTC','HA','T','WTC'],
+['2026-10-15','10:00','14:00','WTC Meeting ','W','M','WTC'],
+['2026-10-15','10:00','11:50','MAG - Subdivison 5','F','P','MAG'],
+['2026-10-15','11:50','12:10','Lunch MAG D-judges + MTC','JL','F','MAG,MTC'],
+['2026-10-15','12:10','14:00','MAG - Subdivison 6','F','P','MAG'],
+['2026-10-15','13:20','13:45','transport WAG D-Judges','SA','T','WAG'],
+['2026-10-15','14:00','14:40','transport MTC','AH','T','MTC'],
+['2026-10-15','14:00','14:25','transport MAG D-Judges','AS','T','MAG'],
+['2026-10-15','14:00','15:30','WAG D-Judges Briefing + Fujitsu','J','M','WAG,WTC'],
+['2026-10-15','16:00','17:28','WAG - Subdivison 1','F','P','WAG'],
+['2026-10-15','17:28','17:50','Break WAG ','JL','F','WAG'],
+['2026-10-15','17:50','19:18','WAG - Subdivison 2','F','P','WAG'],
+['2026-10-15','19:18','19:40','Diner WAG D-Judges + WTC','JL','F','WAG,WTC'],
+['2026-10-15','19:40','21:08','WAG - Subdivison 3','F','P','WAG'],
+['2026-10-15','21:08','21:40','transport WTC','AH','T','WTC'],
+['2026-10-15','21:08','21:25','transport WAG D-Judges','AS','T','WAG'],
+['2026-10-16','07:35','08:15','transport WTC','HA','T','WTC'],
+['2026-10-16','07:50','08:15','transport WAG D-Judges','SA','T','WAG'],
+['2026-10-16','08:30','09:00','WAG D-Judges Briefing','J','M','WAG,WTC'],
+['2026-10-16','09:30','10:58','WAG - Subdivison 4','F','P','WAG'],
+['2026-10-16','10:25','11:25','transport MTC','HA','T','MTC'],
+['2026-10-16','10:58','11:15','Break WAG','JL','F','WAG'],
+['2026-10-16','11:00','12:30','MAG Uniform Distribution','S','O','MAG'],
+['2026-10-16','11:15','12:43','WAG - Subdivison 5','F','P','WAG'],
+['2026-10-16','11:30','12:30','MTC Meeting ','M','M','MTC'],
+['2026-10-16','12:43','13:00','Break WAG','JL','F','WAG'],
+['2026-10-16','12:50','13:15','transport MAG Judges','SA','T','MAG'],
+['2026-10-16','13:00','14:28','WAG - Subdivison 6','F','P','WAG'],
+['2026-10-16','13:30','18:00','MAG Judges Briefing ','J','M','MAG,MTC'],
+['2026-10-16','14:28','16:00','Lunch WAG D-Judges + WTC','JL','F','WAG,WTC'],
+['2026-10-16','16:00','17:28','WAG - Subdivison 7','F','P','WAG'],
+['2026-10-16','17:28','17:45','Break WAG','JL','F','WAG'],
+['2026-10-16','17:45','19:13','WAG - Subdivison 8','F','P','WAG'],
+['2026-10-16','18:00','18:40','transport MTC','AH','T','MTC'],
+['2026-10-16','18:00','18:25','transport MAG Judges','AS','T','MAG'],
+['2026-10-16','19:13','19:50','Diner WAG D-Judges + WTC','JL','F','WTC'],
+['2026-10-16','19:50','21:18','WAG - Subdivison 9','F','P','WAG'],
+['2026-10-16','21:18','21:30','Break WAG','JL','F','WAG'],
+['2026-10-16','21:30','22:58','WAG - Subdivison 10','F','P','WAG'],
+['2026-10-16','22:58','23:38','transport WTC','AH','T','WTC'],
+['2026-10-16','22:58','22:23','transport WAG D-Judges','AS','T','WAG'],
+['2026-10-17','08:05','08:45','transport MTC','HA','T','MTC'],
+['2026-10-17','08:20','08:45','transport MAG Judges','SA','T','MAG'],
+['2026-10-17','09:00','09:30','MAG Judges Briefing','J','M','MAG,MTC'],
+['2026-10-17','10:00','11:50','MAG - Subdivison 1','F','Q','MAG'],
+['2026-10-17','10:50','11:25','transport WTC','HA','T','WTC'],
+['2026-10-17','11:00','12:30','WAG Uniform Distribution','S','O','WAG'],
+['2026-10-17','11:30','12:30','WTC Meeting ','W','M','WTC'],
+['2026-10-17','11:50','12:10','Break MAG','JL','F','MAG'],
+['2026-10-17','12:10','14:00','MAG - Subdivison 2','F','Q','MAG'],
+['2026-10-17','12:50','13:15','transport WAG Judges','SA','T','WAG'],
+['2026-10-17','13:30','17:30','WAG Judges Briefing ','J','M','WAG,WTC'],
+['2026-10-17','14:00','16:00','Lunch MAG ','JL','F','MAG'],
+['2026-10-17','16:00','17:50','MAG - Subdivison 3','F','Q','MAG'],
+['2026-10-17','17:30','18:10','transport WTC','AH','T','WTC'],
+['2026-10-17','17:30','17:55','transport WAG Judges','AS','T','WAG'],
+['2026-10-17','17:50','18:10','Diner MAG','JL','F','MAG'],
+['2026-10-17','18:10','20:00','MAG - Subdivison 4','F','Q','MAG'],
+['2026-10-17','20:00','20:40','transport MTC','AH','T','MTC'],
+['2026-10-17','20:00','20:25','transport MAG Judges','AS','T','MAG'],
+['2026-10-18','08:20','08:45','transport MAG Judges','SA','T','MAG'],
+['2026-10-18','08:05','08:45','transport MTC','HA','T','MTC'],
+['2026-10-18','09:00','09:30','MAG Judges Briefing','J','M','MAG,MTC'],
+['2026-10-18','10:00','11:50','MAG - Subdivison 5','F','Q','MAG'],
+['2026-10-18','11:50','12:10','Lunch MAG','JL','F','MAG'],
+['2026-10-18','11:10','11:55','transport WTC','HA','T','WTC'],
+['2026-10-18','12:00','15:00','WTC Meeting ','W','M','WTC'],
+['2026-10-18','12:10','14:00','MAG - Subdivison 6','F','Q','MAG'],
+['2026-10-18','14:20','14:45','transport WAG Judges','SA','T','WAG'],
+['2026-10-18','14:00','14:40','transport MTC','AH','T','MTC'],
+['2026-10-18','14:00','14:25','transport MAG Judges','AS','T','MAG'],
+['2026-10-18','15:00','15:30','WAG Judges Briefing ','J','M','WAG,WTC'],
+['2026-10-18','16:00','17:20','WAG - Subdivison 1','F','Q','WAG'],
+['2026-10-18','17:20','17:50','Break WAG','JL','F','WAG'],
+['2026-10-18','17:50','19:10','WAG - Subdivison 2','F','Q','WAG'],
+['2026-10-18','19:10','19:40','Diner WAG','JL','F','WAG'],
+['2026-10-18','19:40','21:00','WAG - Subdivison 3','F','Q','WAG'],
+['2026-10-18','21:00','21:40','transport WTC','AH','T','WTC'],
+['2026-10-18','21:00','21:25','transport WAG Judges','AS','T','WAG'],
+['2026-10-19','07:50','08:15','transport WAG Judges','SA','T','WAG'],
+['2026-10-19','07:35','08:15','transport WTC','HA','T','WTC'],
+['2026-10-19','08:30','09:00','WAG Judges Briefing','J','M','WAG,WTC'],
+['2026-10-19','09:30','10:50','WAG - Subdivison 4','F','Q','WAG'],
+['2026-10-19','10:50','11:05','Break WAG','JL','F','WAG'],
+['2026-10-19','10:15','10:55','transport MTC','HA','T','MTC'],
+['2026-10-19','11:00','18:00','MTC Meeting ','M','M','MTC'],
+['2026-10-19','11:05','12:25','WAG - Subdivison 5','F','Q','WAG'],
+['2026-10-19','12:25','12:40','Break WAG','JL','F','WAG'],
+['2026-10-19','12:40','14:00','WAG - Subdivison 6','F','Q','WAG'],
+['2026-10-19','14:00','16:00','Lunch WAG','JL','F','WAG'],
+['2026-10-19','16:00','17:20','WAG - Subdivison 7','F','Q','WAG'],
+['2026-10-19','17:20','17:35','Break WAG','JL','F','WAG'],
+['2026-10-19','18:00','18:40','transport MTC','AH','T','MTC'],
+['2026-10-19','17:35','18:55','WAG - Subdivison 8','F','Q','WAG'],
+['2026-10-19','18:55','19:35','Diner WTC ','JL','F','WTC'],
+['2026-10-19','19:35','20:55','WAG - Subdivison 9','F','Q','WAG'],
+['2026-10-19','20:55','21:10','Break WAG','JL','F','WAG'],
+['2026-10-19','21:10','22:30','WAG - Subdivison 10','F','Q','WAG'],
+['2026-10-19','22:30','23:10','transport WTC','AH','T','WTC'],
+['2026-10-19','22:30','22:55','transport WAG Judges','AS','T','WAG'],
+['2026-10-20','10:20','10:55','transport WTC','HS','T','WTC'],
+['2026-10-20','11:00','16:00','Women Judges’ Day out','S','O','WAG'],
+['2026-10-20','16:05','16:25','transport WTC','SA','T','WTC'],
+['2026-10-20','16:30','18:30','WTC Meeting ','W','M','WTC'],
+['2026-10-20','17:20','17:45','transport MAG Judges','SA','T','MAG'],
+['2026-10-20','17:05','17:45','transport MTC','HA','T','MTC'],
+['2026-10-20','18:00','19:00','Men Judges’ Briefing and Draw for Team Final','J','M','MAG,MTC'],
+['2026-10-20','18:30','19:10','transport WTC','AH','T','WTC'],
+['2026-10-20','19:30','22:30','Men Team Final and Award Ceremony','F','C','MAG'],
+['2026-10-20','22:30','23:10','transport MTC','AH','T','MTC'],
+['2026-10-20','22:30','22:55','transport MAG Judges','AS','T','MAG'],
+['2026-10-21','10:00','11:30','FIG President Round Table ','J','M','FIG'],
+['2026-10-21','10:25','10:55','transport MTC','HS','T','MTC'],
+['2026-10-21','11:00','16:00','Men Judges’ Day out','S','O','MAG'],
+['2026-10-21','16:05','16:25','transport MTC','SA','T','MTC'],
+['2026-10-21','16:30','18:30','MTC Meeting and Men Team Final’s PCVR','M','M','MTC'],
+['2026-10-21','17:05','17:45','transport WAG Judges','SA','T','WAG'],
+['2026-10-21','17:20','17:45','transport WTC','HA','T','WTC'],
+['2026-10-21','18:00','19:00','Women Judges’ Briefing and Draw for Team Final','J','M','WAG,WTC'],
+['2026-10-21','18:30','19:10','transport MTC','AH','T','MTC'],
+['2026-10-21','19:30','22:00','Women Team Final and Award Ceremony','F','C','WAG'],
+['2026-10-21','22:00','22:40','transport WTC','AH','T','WTC'],
+['2026-10-21','22:00','22:25','transport WAG Judges','AS','T','WAG'],
+['2026-10-22','09:15','09:55','Transport WTC','HA','T','WTC'],
+['2026-10-22','10:00','13:00','WTC Meeting and Women Team Final’s PCVR','W','M','WTC'],
+['2026-10-22','14:00','16:00','Women Round Table','J','M','WAG'],
+['2026-10-22','16:30','17:30','Women Athletes’ Meeting','J','M','FIG'],
+['2026-10-22','17:30','18:10','Transport WTC','AH','T','WTC'],
+['2026-10-22','17:20','17:45','transport MAG Judges','SA','T','MAG'],
+['2026-10-22','17:05','17:45','transport MTC','HA','T','MTC'],
+['2026-10-22','18:00','19:00','Men Judges’ Briefing ','J','M','MAG,MTC'],
+['2026-10-22','19:30','22:00','Men All-Around Final and Award Ceremony','F','C','MAG'],
+['2026-10-22','22:00','22:40','transport MTC','AH','T','MTC'],
+['2026-10-22','22:00','22:25','transport MAG Judges','AS','T','MAG'],
+['2026-10-23','14:45','13:25','transport MTC','HA','T','MTC'],
+['2026-10-23','13:30','15:30','MTC Meeting and Men All-Around Final’s PCVR','M','M','MTC'],
+['2026-10-23','14:00','15:30','Men Athletes’ Meeting','J','M','FIG'],
+['2026-10-23','15:00','15:25','transport MAG Judges','SA','T','MAG'],
+['2026-10-23','15:30','17:00','Men Round Table','J','M','MAG'],
+['2026-10-23','17:00','17:40','transport MTC','AH','T','MTC'],
+['2026-10-23','17:00','17:25','transport MAG Judges','AS','T','MAG'],
+['2026-10-23','16:40','17:15','transport WTC','HA','T','WTC'],
+['2026-10-23','16:50','17:15','transport WAG Judges','SA','T','WAG'],
+['2026-10-23','17:30','19:00','Women Judges’ Briefing, Draw for All-Around Final, JEP instruction','J','M','WAG,WTC'],
+['2026-10-23','19:30','22:00','Women All-Around Final and Award Ceremony','F','C','WAG'],
+['2026-10-23','22:00','22:40','transport WTC','AH','T','WTC'],
+['2026-10-23','22:00','22:25','transport WAG Judges','AS','T','WAG'],
+['2026-10-24','08:15','08:55','transport WTC','HA','T','WTC'],
+['2026-10-24','09:00','12:00','WTC Meeting and Women All-Around Final’s PCVR','W','M','WTC'],
+['2026-10-24','11:05','11:30','transport MAG Judges','SA','T','MAG'],
+['2026-10-24','10:50','11:30','transport MTC','HA','T','MTC'],
+['2026-10-24','11:45','12:45','Men Judges’ Briefing and Draw for Apparatus Finals (FX, PH, SR)','J','M','MAG,MTC'],
+['2026-10-24','12:05','12:30','transport WAG Judges','SA','T','WAG'],
+['2026-10-24','12:45','13:30','Women Judges’ Briefing and Draw for Apparatus Finals (VT, UB)','J','M','WAG,WTC'],
+['2026-10-24','14:00','18:00','Apparatus Finals (Day 1) and Award Ceremonies','F','C','MAG,WAG'],
+['2026-10-24','18:00','18:25','transport MAG Judges','AS','T','MAG'],
+['2026-10-24','18:00','18:40','transport MTC','AH','T','MTC'],
+['2026-10-24','18:00','18:25','transport WAG Judges','AS','T','WAG'],
+['2026-10-24','18:00','18:40','transport WTC','AH','T','WTC'],
+['2026-10-25','10:15','10:55','transport WTC','HA','T','WTC'],
+['2026-10-25','10:15','10:55','transport MTC','HA','T','MTC'],
+['2026-10-25','11:00','11:45','MTC Meeting ','M','M','MTC'],
+['2026-10-25','11:00','12:00','WTC Meeting and Women Apparatus Final’s PCVR (VT, UB)','W','M','WTC'],
+['2026-10-25','11:05','11:30','transport MAG Judges','SA','T','MAG'],
+['2026-10-25','11:45','12:45','Men Judges’ Briefing and Draw for Apparatus Finals (VT, PB, HB)','J','M','MAG,MTC'],
+['2026-10-25','12:05','12:30','transport WAG Judges','SA','T','WAG'],
+['2026-10-25','12:45','13:30','Women Judges’ Briefing and Draw for Apparatus Finals (BB, FX)','J','M','WAG,WTC'],
+['2026-10-25','14:00','18:00','Apparatus Finals (Day 2) and Award Ceremonies','F','C','MAG,WAG'],
+['2026-10-25','18:00','18:25','transport MAG Judges','AS','T','MAG'],
+['2026-10-25','18:00','18:40','transport MTC','AH','T','MTC'],
+['2026-10-25','18:00','18:25','transport WAG Judges','AS','T','WAG'],
+['2026-10-25','18:00','18:40','transport WTC','AH','T','WTC'],
+['2026-10-25','19:40','20:00','transport WTC MTC','HS','T','MTC,WTC'],
+['2026-10-25','20:00','00:00','Farewell Banquet ','S','O',''],
+['2026-10-25','23:00','23:40','transport WTC MTC','','T','MTC,WTC'],
+['2026-10-25','23:59','00:40','transport WTC MTC','','T','MTC,WTC'],
+['2026-10-26','','','Official Departure Day of the Delegations and D-Judges','','T','MAG,WAG,FIG'],
+['2026-10-26','08:15','08:55','transport MTC','HA','T','MTC'],
+['2026-10-26','09:00','12:00','MTC Meeting, Men Apparatus Finals PCVR and Fujistu meeting','M','M','MTC'],
+['2026-10-26','12:00','12:40','transport MTC','AH','T','MTC'],
+['2026-10-26','08:45','09:25','Transport WTC','HA','T','WTC'],
+['2026-10-26','09:30','12:30','WTC Meeting, Women Apparatus Finals PCVR (BB, FX), Fujistu meeting','W','M','WTC'],
+['2026-10-26','12:30','13:10','Transport WTC','AH','T','WTC'],
+['2026-10-27','','','Departure of the MTC and the WTC','H','T','MTC,WTC'],
+
+
+
+];
+const events=rows.map(r=>({date:r[0],start:r[1],end:r[2],title:r[3],location:L[r[4]]||r[4],type:T[r[5]]||r[5],aud:r[6]?r[6].split(','):[]}));
+const audienceOptions=['MAG','WAG','WG','MTC','WTC'];
+const AUDIENCE_STORAGE_KEY='rotterdam2026.selectedAudiences';
+function loadSelectedAudiences(){
+  try{
+    const saved=JSON.parse(localStorage.getItem(AUDIENCE_STORAGE_KEY)||'[]');
+    return Array.isArray(saved)?saved.filter(a=>audienceOptions.includes(a)):[];
+  }catch(error){
+    console.warn('Opgeslagen doelgroepen konden niet worden geladen.',error);
+    return [];
+  }
+}
+function storeSelectedAudiences(){
+  try{
+    localStorage.setItem(AUDIENCE_STORAGE_KEY,JSON.stringify(selectedAudiences));
+  }catch(error){
+    console.warn('Doelgroepen konden niet worden opgeslagen.',error);
+  }
+}
+let selectedAudiences=loadSelectedAudiences();
+let pendingAudiences=[];
+const FAVORITES_STORAGE_KEY='rotterdam2026.favorites';
+function eventKey(event){return [event.date,event.start,event.end,event.title,event.location].join('|')}
+function loadFavorites(){
+  try{
+    const saved=JSON.parse(localStorage.getItem(FAVORITES_STORAGE_KEY)||'[]');
+    return Array.isArray(saved)?saved.filter(key=>typeof key==='string'):[];
+  }catch(error){console.warn('Favorieten konden niet worden geladen.',error);return []}
+}
+function storeFavorites(){
+  try{localStorage.setItem(FAVORITES_STORAGE_KEY,JSON.stringify(favorites))}
+  catch(error){console.warn('Favorieten konden niet worden opgeslagen.',error)}
+}
+let favorites=loadFavorites();
+let currentDetailIndex=null;
+
+const ROTTERDAM_TIME_ZONE='Europe/Amsterdam';
+let rotterdamClockFormatter=new Intl.DateTimeFormat('nl-NL',{timeZone:ROTTERDAM_TIME_ZONE,hour:'2-digit',minute:'2-digit',hour12:false});
+const rotterdamDateFormatter=new Intl.DateTimeFormat('en-CA',{timeZone:ROTTERDAM_TIME_ZONE,year:'numeric',month:'2-digit',day:'2-digit'});
+function getRotterdamNowParts(){
+  const instant=new Date();
+  const dp=rotterdamDateFormatter.formatToParts(instant),tp=rotterdamClockFormatter.formatToParts(instant);
+  const get=(parts,type)=>parts.find(p=>p.type===type)?.value||'';
+  return {date:`${get(dp,'year')}-${get(dp,'month')}-${get(dp,'day')}`,hour:Number(get(tp,'hour'))%24,minute:Number(get(tp,'minute')),label:rotterdamClockFormatter.format(instant)};
+}
+function timeToMinutes(value){
+  if(!value||!/^([01]\d|2[0-3]):[0-5]\d$/.test(value))return null;
+  const [hour,minute]=value.split(':').map(Number); return hour*60+minute;
+}
+const selectedDateDefault=getRotterdamNowParts().date;
+let selectedDate=selectedDateDefault;
+
+let selectedType='all';let previousPage='home';let dateShort=new Intl.DateTimeFormat('nl-NL',{weekday:'short',day:'numeric',month:'short'});let dateLong=new Intl.DateTimeFormat('nl-NL',{weekday:'long',day:'numeric',month:'long',year:'numeric'});function asDate(v){const [y,m,d]=v.split('-').map(Number);return new Date(y,m-1,d)}
+function matchesAudience(e){return selectedAudiences.some(a=>e.aud.includes(a))}
+
+function isNowRunning(event){
+  if(!event.start||!event.end)return false;
+  const now=getRotterdamNowParts();
+  if(event.date!==now.date)return false;
+  const start=timeToMinutes(event.start),end=timeToMinutes(event.end);
+  if(start===null||end===null||end<start)return false;
+  const current=now.hour*60+now.minute;
+  return current>=start&&current<end;
+}
+
+function renderWhatsAppGroups(){
+  const root=document.getElementById('whatsappGroups');
+  const summary=document.getElementById('whatsappSummary');
+  if(!root||!summary)return;
+  const groups=[];
+  if(selectedAudiences.includes('MAG')||selectedAudiences.includes('MTC'))groups.push({name:'MAG Officials WCAG Rotterdam 2026',url:'https://chat.whatsapp.com/GlAunw1o8whIlYuMvx0IKV'});
+  if(selectedAudiences.includes('WAG')||selectedAudiences.includes('WTC'))groups.push({name:'WAG Officials WCAG Rotterdam 2026',url:'https://chat.whatsapp.com/IugNbPBvrs7Ad8NBHnmVW6'});
+  summary.textContent='';
+  root.innerHTML=groups.length?groups.map(group=>`<div class="setting" onclick="window.open('${group.url}','_blank','noopener,noreferrer')"><span><b>${group.name}</b></span><b>›</b></div>`).join(''):'<div class="setting"><span><small>Geen whatsapp groep beschikbaar voor de geselecteerde doelgroep.</small></span></div>';
+}
+function toggleWhatsAppGroups(){
+  renderWhatsAppGroups();
+  const root=document.getElementById('whatsappGroups');
+  const toggle=document.getElementById('whatsappToggle');
+  const arrow=document.getElementById('whatsappArrow');
+  const open=!root.classList.contains('show');
+  root.classList.toggle('show',open);
+  arrow.classList.toggle('open',open);
+  toggle.setAttribute('aria-expanded',String(open));
+}
+function renderJudgesDayOut(){
+    const root=document.getElementById('judgesDayOutGroups');
+    const summary=document.getElementById('judgesDayOutSummary');
+
+    if(!root || !summary) return;
+
+    const forms=[];
+
+    // MAG zichtbaar voor MAG en MTC
+    if(selectedAudiences.includes('MAG') || selectedAudiences.includes('MTC')){
+        forms.push({
+            name:'MAG',
+            url:'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=fCYko0QBgkKUIJpU0a6UIgimLoncQmNMmUz0MRGn3QBUQ0dPMlBPVDdBTDk4SDNLTUJMWFhNT1A0SC4u'
+        });
+    }
+
+    // WAG zichtbaar voor WAG en WTC
+    if(selectedAudiences.includes('WAG') || selectedAudiences.includes('WTC')){
+        forms.push({
+            name:'WAG',
+            url:'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=fCYko0QBgkKUIJpU0a6UIgimLoncQmNMmUz0MRGn3QBUOVdLNzZTQ1YyQVJGQk9FR1BMRTBSNjBYMS4u'
+        });
+    }
+
+    summary.textContent='Aanmelden voor activiteit';
+
+    root.innerHTML=forms.length
+        ? forms.map(form => `
+            <div class="setting" onclick="window.open('${form.url}','_blank','noopener,noreferrer')">
+                <span><b>${form.name}</b></span>
+                <b>›</b>
+            </div>
+        `).join('')
+        : `
+            <div class="setting">
+                <span><small>Geen formulier beschikbaar voor de geselecteerde doelgroep.</small></span>
+            </div>
+        `;
+}
+function toggleJudgesDayOut(){
+  renderJudgesDayOut();
+  const root=document.getElementById('judgesDayOutGroups');
+  const toggle=document.getElementById('judgesDayOutToggle');
+  const arrow=document.getElementById('judgesDayOutArrow');
+  const open=!root.classList.contains('show');
+  root.classList.toggle('show',open);
+  arrow.classList.toggle('open',open);
+  toggle.setAttribute('aria-expanded',String(open));
+}
+let busScale=1,busFitScale=1,busPinchDistance=0,busPinchScale=1;
+let busTouchStartX=0,busTouchStartY=0,busScrollStartX=0,busScrollStartY=0,busTouchMode='';
+const BUS_MIN_FACTOR=.5,BUS_MAX_FACTOR=6;
+function openPdfViewer(){previousPage='more';document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById('pdfviewer').classList.add('active');document.getElementById('nav').style.display='none';window.scrollTo(0,0);const image=document.getElementById('busImage');if(image&&image.complete&&image.naturalWidth)requestAnimationFrame(()=>requestAnimationFrame(fitBusImage))}
+function closePdfViewer(){navigate('more')}
+function calculateBusFit(){const viewer=document.getElementById('busViewer'),image=document.getElementById('busImage');if(!viewer||!image||!image.naturalWidth||!image.naturalHeight)return 1;return Math.min((viewer.clientWidth-16)/image.naturalWidth,(viewer.clientHeight-16)/image.naturalHeight)}
+function applyBusScale(scale,keepCenter=false){const viewer=document.getElementById('busViewer'),stage=document.getElementById('busStage'),image=document.getElementById('busImage');if(!viewer||!stage||!image||!image.naturalWidth)return;const oldWidth=image.offsetWidth||image.naturalWidth*busScale,oldHeight=image.offsetHeight||image.naturalHeight*busScale,centerX=oldWidth?((viewer.scrollLeft+viewer.clientWidth/2)/oldWidth):.5,centerY=oldHeight?((viewer.scrollTop+viewer.clientHeight/2)/oldHeight):.5;busScale=Math.min(busFitScale*BUS_MAX_FACTOR,Math.max(busFitScale*BUS_MIN_FACTOR,scale));const width=Math.round(image.naturalWidth*busScale),height=Math.round(image.naturalHeight*busScale);image.style.width=width+'px';image.style.height=height+'px';stage.style.width=Math.max(viewer.clientWidth,width)+'px';stage.style.height=Math.max(viewer.clientHeight,height)+'px';const level=document.getElementById('busZoomLevel');if(level)level.textContent=Math.round((busScale/busFitScale)*100)+'%';requestAnimationFrame(()=>{if(keepCenter){viewer.scrollLeft=Math.max(0,centerX*width-viewer.clientWidth/2);viewer.scrollTop=Math.max(0,centerY*height-viewer.clientHeight/2)}else{viewer.scrollLeft=0;viewer.scrollTop=0}})}
+function fitBusImage(){const image=document.getElementById('busImage');if(!image||!image.complete||!image.naturalWidth)return;busFitScale=calculateBusFit();applyBusScale(busFitScale,false);const level=document.getElementById('busZoomLevel');if(level)level.textContent='Passend'}
+function zoomBusImage(direction){applyBusScale(busScale*(direction>0?1.25:.8),true)}
+function initializeBusImage(){const image=document.getElementById('busImage'),error=document.getElementById('busImageError');if(image)image.style.display='block';if(error)error.classList.remove('show');requestAnimationFrame(()=>requestAnimationFrame(fitBusImage))}
+function showBusImageError(){const image=document.getElementById('busImage'),error=document.getElementById('busImageError');if(image)image.style.display='none';if(error){error.innerHTML='Het busschema kon niet worden geladen. Controleer of <b>Busschema juryleden.jpg</b> exact zo heet en in dezelfde map staat als dit HTML-bestand.';error.classList.add('show')}}
+function busTouchDistance(touches){return Math.hypot(touches[0].clientX-touches[1].clientX,touches[0].clientY-touches[1].clientY)}
+function enableBusGestures(){const viewer=document.getElementById('busViewer');if(!viewer||viewer.dataset.gestures==='on')return;viewer.dataset.gestures='on';viewer.addEventListener('touchstart',event=>{if(event.touches.length===2){event.preventDefault();busTouchMode='pinch';busPinchDistance=busTouchDistance(event.touches);busPinchScale=busScale}else if(event.touches.length===1){busTouchMode='pan';busTouchStartX=event.touches[0].clientX;busTouchStartY=event.touches[0].clientY;busScrollStartX=viewer.scrollLeft;busScrollStartY=viewer.scrollTop}},{passive:false});viewer.addEventListener('touchmove',event=>{if(event.touches.length===2){event.preventDefault();if(busTouchMode!=='pinch'||!busPinchDistance){busTouchMode='pinch';busPinchDistance=busTouchDistance(event.touches);busPinchScale=busScale}applyBusScale(busPinchScale*(busTouchDistance(event.touches)/busPinchDistance),true)}else if(event.touches.length===1&&busTouchMode==='pan'){event.preventDefault();viewer.scrollLeft=busScrollStartX-(event.touches[0].clientX-busTouchStartX);viewer.scrollTop=busScrollStartY-(event.touches[0].clientY-busTouchStartY)}},{passive:false});viewer.addEventListener('touchend',event=>{if(event.touches.length===1){busTouchMode='pan';busTouchStartX=event.touches[0].clientX;busTouchStartY=event.touches[0].clientY;busScrollStartX=viewer.scrollLeft;busScrollStartY=viewer.scrollTop;busPinchDistance=0}else{busTouchMode='';busPinchDistance=0}},{passive:false});viewer.addEventListener('touchcancel',()=>{busTouchMode='';busPinchDistance=0},{passive:false});viewer.addEventListener('wheel',event=>{if(event.ctrlKey){event.preventDefault();applyBusScale(busScale*(event.deltaY<0?1.12:.89),true)}},{passive:false})}
+const FLOOR_PLANS={0:{src:'./WCAG-A1-Floor-0.png',alt:'Plattegrond Floor 0'},1:{src:'./WCAG-A1-Floor-1.png',alt:'Plattegrond Floor 1'}};
+let activeFloorPlan=0,floorPlanScale=1,floorPlanFitScale=1,floorPlanPinchDistance=0,floorPlanPinchScale=1;
+let floorPlanTouchStartX=0,floorPlanTouchStartY=0,floorPlanScrollStartX=0,floorPlanScrollStartY=0,floorPlanTouchMode='';
+const FLOORPLAN_MIN_FACTOR=.5,FLOORPLAN_MAX_FACTOR=6;
+function openFloorPlan(){previousPage='more';document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById('floorplan').classList.add('active');document.getElementById('nav').style.display='none';selectFloorPlan(0,true);window.scrollTo(0,0)}
+function closeFloorPlan(){navigate('more')}
+function selectFloorPlan(floor,force=false){
+  if(!FLOOR_PLANS[floor])return;
+  const changed=activeFloorPlan!==floor;
+  activeFloorPlan=floor;
+  [0,1].forEach(number=>{const button=document.getElementById('floorButton'+number);if(button){const active=number===floor;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active))}});
+  const image=document.getElementById('floorplanImage'),error=document.getElementById('floorplanError');
+  if(error)error.classList.remove('show');
+  if(image){image.style.display='block';image.alt=FLOOR_PLANS[floor].alt;if(changed||force||!image.src.endsWith(FLOOR_PLANS[floor].src.replace('./',''))){image.src=FLOOR_PLANS[floor].src}else if(image.complete&&image.naturalWidth){fitFloorPlan()}}
+}
+function initializeFloorPlan(){const image=document.getElementById('floorplanImage'),error=document.getElementById('floorplanError');if(image)image.style.display='block';if(error)error.classList.remove('show');requestAnimationFrame(()=>requestAnimationFrame(fitFloorPlan))}
+function calculateFloorPlanFit(){const viewer=document.getElementById('floorplanViewer'),image=document.getElementById('floorplanImage');if(!viewer||!image||!image.naturalWidth||!image.naturalHeight)return 1;return Math.min((viewer.clientWidth-16)/image.naturalWidth,(viewer.clientHeight-16)/image.naturalHeight)}
+function applyFloorPlanScale(scale,keepCenter=false){
+ const viewer=document.getElementById('floorplanViewer'),stage=document.getElementById('floorplanStage'),image=document.getElementById('floorplanImage');if(!viewer||!stage||!image||!image.naturalWidth)return;
+ const oldWidth=image.offsetWidth||image.naturalWidth*floorPlanScale,oldHeight=image.offsetHeight||image.naturalHeight*floorPlanScale,centerX=oldWidth?((viewer.scrollLeft+viewer.clientWidth/2)/oldWidth):.5,centerY=oldHeight?((viewer.scrollTop+viewer.clientHeight/2)/oldHeight):.5;
+ floorPlanScale=Math.min(floorPlanFitScale*FLOORPLAN_MAX_FACTOR,Math.max(floorPlanFitScale*FLOORPLAN_MIN_FACTOR,scale));
+ const width=Math.round(image.naturalWidth*floorPlanScale),height=Math.round(image.naturalHeight*floorPlanScale);image.style.width=width+'px';image.style.height=height+'px';stage.style.width=Math.max(viewer.clientWidth,width)+'px';stage.style.height=Math.max(viewer.clientHeight,height)+'px';
+ const level=document.getElementById('floorplanZoomLevel');if(level)level.textContent=Math.round((floorPlanScale/floorPlanFitScale)*100)+'%';
+ requestAnimationFrame(()=>{if(keepCenter){viewer.scrollLeft=Math.max(0,centerX*width-viewer.clientWidth/2);viewer.scrollTop=Math.max(0,centerY*height-viewer.clientHeight/2)}else{viewer.scrollLeft=0;viewer.scrollTop=0}})
+}
+function fitFloorPlan(){const image=document.getElementById('floorplanImage');if(!image||!image.complete||!image.naturalWidth)return;floorPlanFitScale=calculateFloorPlanFit();applyFloorPlanScale(floorPlanFitScale,false);const level=document.getElementById('floorplanZoomLevel');if(level)level.textContent='Passend'}
+function zoomFloorPlan(direction){applyFloorPlanScale(floorPlanScale*(direction>0?1.25:.8),true)}
+function showFloorPlanError(){const image=document.getElementById('floorplanImage'),error=document.getElementById('floorplanError'),file=FLOOR_PLANS[activeFloorPlan].src.replace('./','');if(image)image.style.display='none';if(error){error.innerHTML='De geselecteerde plattegrond kon niet worden geladen. Controleer of <b>'+file+'</b> exact zo heet en in dezelfde map staat als dit HTML-bestand.';error.classList.add('show')}}
+function floorPlanTouchDistance(touches){return Math.hypot(touches[0].clientX-touches[1].clientX,touches[0].clientY-touches[1].clientY)}
+function enableFloorPlanGestures(){const viewer=document.getElementById('floorplanViewer');if(!viewer||viewer.dataset.gestures==='on')return;viewer.dataset.gestures='on';
+ viewer.addEventListener('touchstart',event=>{if(event.touches.length===2){event.preventDefault();floorPlanTouchMode='pinch';floorPlanPinchDistance=floorPlanTouchDistance(event.touches);floorPlanPinchScale=floorPlanScale}else if(event.touches.length===1){floorPlanTouchMode='pan';floorPlanTouchStartX=event.touches[0].clientX;floorPlanTouchStartY=event.touches[0].clientY;floorPlanScrollStartX=viewer.scrollLeft;floorPlanScrollStartY=viewer.scrollTop}},{passive:false});
+ viewer.addEventListener('touchmove',event=>{if(event.touches.length===2){event.preventDefault();if(floorPlanTouchMode!=='pinch'||!floorPlanPinchDistance){floorPlanTouchMode='pinch';floorPlanPinchDistance=floorPlanTouchDistance(event.touches);floorPlanPinchScale=floorPlanScale}applyFloorPlanScale(floorPlanPinchScale*(floorPlanTouchDistance(event.touches)/floorPlanPinchDistance),true)}else if(event.touches.length===1&&floorPlanTouchMode==='pan'){event.preventDefault();viewer.scrollLeft=floorPlanScrollStartX-(event.touches[0].clientX-floorPlanTouchStartX);viewer.scrollTop=floorPlanScrollStartY-(event.touches[0].clientY-floorPlanTouchStartY)}},{passive:false});
+ viewer.addEventListener('touchend',event=>{if(event.touches.length===1){floorPlanTouchMode='pan';floorPlanTouchStartX=event.touches[0].clientX;floorPlanTouchStartY=event.touches[0].clientY;floorPlanScrollStartX=viewer.scrollLeft;floorPlanScrollStartY=viewer.scrollTop;floorPlanPinchDistance=0}else{floorPlanTouchMode='';floorPlanPinchDistance=0}},{passive:false});
+ viewer.addEventListener('touchcancel',()=>{floorPlanTouchMode='';floorPlanPinchDistance=0},{passive:false});viewer.addEventListener('wheel',event=>{if(event.ctrlKey){event.preventDefault();applyFloorPlanScale(floorPlanScale*(event.deltaY<0?1.12:.89),true)}},{passive:false})}
+window.addEventListener('resize',()=>{if(document.getElementById('floorplan')?.classList.contains('active'))fitFloorPlan();if(document.getElementById('pdfviewer')?.classList.contains('active'))fitBusImage()});
+
+function navigate(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');document.getElementById('nav').style.display='flex';document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('on',b.dataset.page===id));if(id==='favorites')renderFavorites();if(id!=='detail')previousPage=id;window.scrollTo(0,0)}
+function renderRoles(){document.getElementById('roleList').innerHTML=audienceOptions.map(a=>`<div class="role ${pendingAudiences.includes(a)?'selected':''}" data-audience="${a}"><b>${a}</b><span class="check"></span></div>`).join('');document.querySelectorAll('.role').forEach(r=>r.onclick=()=>{const a=r.dataset.audience;pendingAudiences=pendingAudiences.includes(a)?pendingAudiences.filter(x=>x!==a):[...pendingAudiences,a];renderRoles()})}
+function openAudiencePicker(){pendingAudiences=[...selectedAudiences];document.getElementById('audienceWarning').classList.remove('show');renderRoles();document.getElementById('audienceOverlay').classList.add('show')}function saveAudiences(){if(!pendingAudiences.length){document.getElementById('audienceWarning').classList.add('show');return}selectedAudiences=[...pendingAudiences];storeSelectedAudiences();document.getElementById('audienceOverlay').classList.remove('show');refresh()}function selectAllAudiences(){pendingAudiences=[...audienceOptions];renderRoles()}
+function renderDates(){const dates=[...new Set(events.map(e=>e.date))].sort();document.getElementById('dateSelector').innerHTML=dates.map(d=>{const p=dateShort.formatToParts(asDate(d)),w=(p.find(x=>x.type==='weekday')?.value||'').replace('.','').toUpperCase(),n=p.find(x=>x.type==='day')?.value||'',m=(p.find(x=>x.type==='month')?.value||'').replace('.','');return `<button class="date ${d===selectedDate?'on':''}" data-date="${d}">${w}<small>${n} ${m}</small></button>`}).join('');document.querySelectorAll('.date').forEach(b=>b.onclick=()=>{selectedDate=b.dataset.date;renderDates();renderSchedule()})}
+function eventCard(e,index){
+  const favorite=isFavorite(index);
+  const actionLabel=favorite?'Verwijder uit favorieten':'Toevoegen aan favorieten';
+  return `<div class="card ${e.type.toLowerCase()}" data-index="${index}"><div class="card-main"><span class="small"><b>${e.start||'Tijd onbekend'}</b>${e.end?' – '+e.end:''}</span><h3>${e.title}</h3><span class="small">⌖ ${e.location||'Locatie onbekend'}</span></div><div class="card-side"><span class="eyebrow">${e.type}</span><button class="favorite-toggle ${favorite?'active':''}" type="button" title="${actionLabel}" aria-label="${actionLabel}: ${e.title}" aria-pressed="${favorite}" onclick="event.stopPropagation();toggleFavorite(${index})">${favorite?'★':'☆'}</button><span class="card-audiences">${e.aud.map(a=>`<span class="badge">${a}</span>`).join('')}</span></div></div>`
+}
+function bindCards(root){root.querySelectorAll('[data-index]').forEach(c=>c.onclick=()=>openDetail(Number(c.dataset.index)))}
+function isFavorite(index){return favorites.includes(eventKey(events[index]))}
+function updateFavoriteCount(){
+  const count=document.getElementById('favoriteCount');
+  if(count)count.textContent=String(favorites.length);
+}
+function updateFavoriteButton(index){
+  const button=document.getElementById('favoriteButton');
+  if(!button)return;
+  const active=isFavorite(index);
+  button.textContent=active?'★ Verwijder uit favorieten':'☆ Toevoegen aan favorieten';
+  button.onclick=()=>toggleFavorite(index);
+}
+function toggleFavorite(index){
+  const key=eventKey(events[index]);
+  favorites=favorites.includes(key)?favorites.filter(item=>item!==key):[...favorites,key];
+  storeFavorites();
+  updateFavoriteCount();
+  if(currentDetailIndex===index)updateFavoriteButton(index);
+  renderFavorites();
+  renderSchedule();
+  renderHome();
+}
+function removeFavorite(index,event){
+  if(event)event.stopPropagation();
+  const key=eventKey(events[index]);
+  favorites=favorites.filter(item=>item!==key);
+  storeFavorites();updateFavoriteCount();renderFavorites();
+  if(currentDetailIndex===index)updateFavoriteButton(index);
+}
+function favoriteCard(e,index){
+  return eventCard(e,index);
+}
+function renderFavorites(){
+  const root=document.getElementById('favoritesContent');if(!root)return;
+  const list=events.map((e,index)=>({...e,index})).filter(e=>favorites.includes(eventKey(e))).sort((a,b)=>a.date.localeCompare(b.date)||(a.start||'99:99').localeCompare(b.start||'99:99'));
+  if(!list.length){root.innerHTML='<div class="empty">Je hebt nog geen favoriete activiteiten.<br><br>Klik in het overzicht op <b>☆</b> om een activiteit toe te voegen.</div>';updateFavoriteCount();return}
+  let lastDate='';
+  root.innerHTML=list.map(e=>{const heading=e.date!==lastDate?`<div class="favorite-date">${dateLong.format(asDate(e.date))}</div>`:'';lastDate=e.date;return heading+favoriteCard(e,e.index)}).join('');
+  bindCards(root);updateFavoriteCount();
+}
+function renderSchedule(){const list=events.map((e,index)=>({...e,index})).filter(e=>e.date===selectedDate&&matchesAudience(e)&&(selectedType==='all'||e.type===selectedType)).sort((a,b)=>(a.start||'99:99').localeCompare(b.start||'99:99'));const root=document.getElementById('schedule');root.innerHTML=`<div class="section-title">${dateLong.format(asDate(selectedDate)).toUpperCase()}</div>`+(list.map(e=>eventCard(e,e.index)).join('')||'<div class="empty">Geen activiteiten voor deze selectie.</div>');bindCards(root)}
+function renderHome(){
+  const now=getRotterdamNowParts();
+  const today=now.date;
+  const list=events.map((e,index)=>({...e,index})).filter(e=>e.date===today&&matchesAudience(e)).sort((a,b)=>(a.start||'99:99').localeCompare(b.start||'99:99'));
+  const root=document.getElementById('homeContent');
+  if(!list.length){root.innerHTML=`<div class="empty">Geen activiteiten voor je huidige doelgroepselectie op ${dateLong.format(asDate(today))}.<br><button class="primary" onclick="openAudiencePicker()">Wijzig doelgroepen</button></div>`;return}
+  const current=list.find(isNowRunning),currentMinutes=now.hour*60+now.minute;
+  const upcoming=list.find(e=>e.date===now.date&&timeToMinutes(e.start)!==null&&timeToMinutes(e.start)>=currentMinutes);
+  const first=current||upcoming||list[0];
+  const rest=list.filter(e=>e.index!==first.index).slice(0,4);
+  const selectedIsToday=true;
+  const status=current?'NU BEZIG':(selectedIsToday&&upcoming?'VOLGENDE':'GESELECTEERD');
+  const heading=current?'Nu bezig in Rotterdam':(selectedIsToday&&upcoming?'Eerstvolgende activiteit':'Activiteit');
+  const firstFavorite=isFavorite(first.index);
+  const firstFavoriteLabel=firstFavorite?'Verwijder uit favorieten':'Toevoegen aan favorieten';
+  root.innerHTML=`<div class="hero" data-index="${first.index}"><button class="favorite-toggle ${firstFavorite?'active':''}" type="button" title="${firstFavoriteLabel}" aria-label="${firstFavoriteLabel}: ${first.title}" aria-pressed="${firstFavorite}" onclick="event.stopPropagation();toggleFavorite(${first.index})">${firstFavorite?'★':'☆'}</button><div class="between"><span class="eyebrow">${heading}</span><span class="badge status">${status}</span></div><h2>${first.title}</h2><div class="time">${first.start||'Tijd onbekend'}${first.end?' – '+first.end:''}</div><div class="place">⌖ ${first.location||'Locatie onbekend'}</div><div class="small" style="margin-top:8px;color:rgba(255,255,255,.78)">Lokale tijd Rotterdam: ${now.label}</div></div><div class="section-title">DAARNA</div>${rest.map(e=>eventCard(e,e.index)).join('')}`;
+  bindCards(root);
+}
+function openDetail(index){const e=events[index];if(!e)return;currentDetailIndex=index;document.getElementById('detailTitle').textContent=e.title;document.getElementById('detailType').textContent=e.type;document.getElementById('detailTime').textContent=`${dateLong.format(asDate(e.date))} · ${e.start}${e.end?' – '+e.end:''}`;document.getElementById('detailLocation').textContent=e.location;document.getElementById('detailAudience').innerHTML=e.aud.map(a=>`<span class="badge active">${a}</span>`).join('');updateFavoriteButton(index);navigate('detail')}function goBack(){navigate(previousPage)}function refresh(){document.getElementById('audienceSetting').textContent=selectedAudiences.join(', ');renderDates();renderHome();renderSchedule();renderFavorites();renderWhatsAppGroups();renderJudgesDayOut();updateFavoriteCount()}
+document.querySelectorAll('.filters .chip').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filters .chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');selectedType=b.dataset.type;renderSchedule()});
+renderRoles();
+if(selectedAudiences.length>0){
+  refresh();
+}else{
+  renderDates();
+  renderHome();
+  renderSchedule();
+  openAudiencePicker();
+}
+renderFavorites();renderWhatsAppGroups();renderJudgesDayOut();updateFavoriteCount();enableFloorPlanGestures();enableBusGestures();
+document.querySelector('.date.on')?.scrollIntoView({inline:'center',block:'nearest'});
+
+
+/* Bilingual Dutch/English interface */
+const LANGUAGE_STORAGE_KEY='rotterdam2026.language';
+let currentLanguage=localStorage.getItem(LANGUAGE_STORAGE_KEY)||'nl';
+const NL_EN={
+'Vandaag':'Today','PROGRAMMA':'PROGRAMME','FAVORIETEN':'FAVORITES','MEER':'MORE','Alles':'All','Wedstrijd':'Competition','Meeting':'Meeting','Transport':'Transport','Eten':'Food','Mijn doelgroepen':'My audiences','Nog niet gekozen':'Not selected','Taal':'Language','Nederlands':'Dutch','Whatsapp groep':'WhatsApp group',"Busschema's":'Bus schedules','Plattegronden':'Floor plans','Bekijk Floor 0 en Floor 1':'View Floor 0 and Floor 1','Toon beschikbare formulieren':'Show available forms','Terug':'Back','Passend':'Fit','Gebruik twee vingers om in of uit te zoomen en één vinger om te verplaatsen':'Use two fingers to zoom in or out and one finger to move','Plattegrond':'Floor plan','Locatie':'Location','Relevant voor':'Relevant for','Toevoegen aan favorieten':'Add to favorites','Nu':'Now','Programma':'Programme','Favorieten':'Favorites','Meer':'More','Kies je doelgroepen':'Choose your audiences','Selecteer minimaal één groep om relevante activiteiten te zien.':'Select at least one group to see relevant activities.','Kies minimaal één doelgroep.':'Select at least one audience.','Toon mijn programma':'Show my programme','Selecteer alles':'Select all','Aanmelden voor activiteit':'Register for activity','Geen whatsapp groep beschikbaar voor de geselecteerde doelgroep.':'No WhatsApp group is available for the selected audience.','Geen formulier beschikbaar voor de geselecteerde doelgroep.':'No form is available for the selected audience.','Tijd onbekend':'Time unknown','Locatie onbekend':'Location unknown','Verwijder uit favorieten':'Remove from favorites','Je hebt nog geen favoriete activiteiten.':'You do not have any favorite activities yet.','Open een activiteit en kies':'Open an activity and choose','Klik in het overzicht op':'Click in the overview on','om een activiteit toe te voegen.':'to add an activity.','Geen activiteiten voor deze selectie.':'No activities for this selection.','Wijzig doelgroepen':'Change audiences','NU BEZIG':'HAPPENING NOW','VOLGENDE':'NEXT','GESELECTEERD':'SELECTED','Nu bezig in Rotterdam':'Happening now in Rotterdam','Eerstvolgende activiteit':'Next activity','Activiteit':'Activity','Lokale tijd Rotterdam':'Local Rotterdam time','DAARNA':'UP NEXT'
+};
+const EN_NL=Object.fromEntries(Object.entries(NL_EN).map(([a,b])=>[b,a]));
+const phrasePairs=[
+['Geen activiteiten voor je huidige doelgroepselectie op','No activities for your current audience selection on'],
+['Het busschema kon niet worden geladen. Controleer of','The bus schedule could not be loaded. Check that'],
+['exact zo heet en in dezelfde map staat als dit HTML-bestand.','has exactly this name and is in the same folder as this HTML file.'],
+['De geselecteerde plattegrond kon niet worden geladen. Controleer of','The selected floor plan could not be loaded. Check that']
+];
+function translateText(value,to){
+  if(!value||!value.trim())return value;
+  const lead=value.match(/^\s*/)[0],trail=value.match(/\s*$/)[0],core=value.trim();
+  const map=to==='en'?NL_EN:EN_NL;
+  let result=map[core]||core;
+  phrasePairs.forEach(pair=>{const from=to==='en'?pair[0]:pair[1],dest=to==='en'?pair[1]:pair[0];result=result.split(from).join(dest)});
+  return lead+result+trail;
+}
+function translatePage(){
+  document.documentElement.lang=currentLanguage;
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+  const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
+  nodes.forEach(node=>{if(node.parentElement&&['SCRIPT','STYLE'].includes(node.parentElement.tagName))return;const next=translateText(node.nodeValue,currentLanguage);if(next!==node.nodeValue)node.nodeValue=next});
+  document.querySelectorAll('[aria-label],[title]').forEach(el=>['aria-label','title'].forEach(a=>{if(el.hasAttribute(a))el.setAttribute(a,translateText(el.getAttribute(a),currentLanguage))}));
+  const setting=document.getElementById('languageSetting');if(setting)setting.textContent=currentLanguage==='en'?'English':'Nederlands';
+  const loc=currentLanguage==='en'?'en-GB':'nl-NL';
+  dateShort=new Intl.DateTimeFormat(loc,{weekday:'short',day:'numeric',month:'short'});
+  dateLong=new Intl.DateTimeFormat(loc,{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+  rotterdamClockFormatter=new Intl.DateTimeFormat(loc,{timeZone:ROTTERDAM_TIME_ZONE,hour:'2-digit',minute:'2-digit',hour12:false});
+}
+function openLanguagePicker(){document.getElementById('languageOverlay').classList.add('show')}
+function setLanguage(lang){
+  if(!['nl','en'].includes(lang))return;
+  currentLanguage=lang;localStorage.setItem(LANGUAGE_STORAGE_KEY,lang);
+  document.getElementById('languageOverlay').classList.remove('show');
+  refresh();translatePage();
+}
+const languageObserver=new MutationObserver(()=>{languageObserver.disconnect();translatePage();languageObserver.observe(document.body,{childList:true,subtree:true,characterData:true})});
+languageObserver.observe(document.body,{childList:true,subtree:true,characterData:true});
+translatePage();
+if(!localStorage.getItem(LANGUAGE_STORAGE_KEY))openLanguagePicker();
+
+</script>
+</body>
+</html>
