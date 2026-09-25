@@ -83,40 +83,56 @@ const L={F:'FOP',J:'Ahoy · Judges Room',JL:'Ahoy · Judges Lounge',M:'Ahoy · M
 const T={T:'Transport',M:'Meetings',C:'FINALS',Q:'QUALIFICATION',P:'PODIUM TRAINING',F:'Food',O:'Other activities'};
 const rows=[
 
-['2026-09-15','19:30','21:00','Werkgroep meeting','H','T','MTC'],['2026-09-15','21:30','22:00','Arrival of the MTC','H','T','MTC'],
-
-['2026-10-11','','','Arrival of the MTC','H','T','MTC'],
-
-['2026-10-12','','','Arrival of the WTC','H','T','WTC'],['2026-10-12','','','Arrival of the MAG D-Judges','S','T','MAG'],['2026-10-12','09:15','09:55','Transport MTC','HA','T','MTC'],['2026-10-12','10:00','18:00','MTC Meeting','M','M','MTC'],['2026-10-12','18:00','18:40','Transport MTC','AH','T','MTC'],
-
-['2026-10-13','','','Arrival WAG D-Judges','S','T','WAG'],['2026-10-13','08:45','09:25','Transport MTC','HA','T','MTC'],['2026-10-13','09:30','12:30','MTC Meeting','M','M','MTC'],['2026-10-13','09:15','09:55','Transport WTC','HA','T','WTC'],['2026-10-13','10:00','18:00','WTC Meeting','W','M','WTC'],['2026-10-13','13:25','13:50','Transport MAG D-Judges','SA','T','MAG'],['2026-10-13','14:00','18:00','Meeting with MAG D-Judges','J','M','MAG'],['2026-10-13','18:00','18:40','Transport MTC','AH','T','MTC'],['2026-10-13','18:00','18:40','Transport WTC','AH','T','WTC'],['2026-10-13','18:00','18:25','Transport MAG D-Judges','AS','T','MAG'],['2026-10-13','19:00','20:00','Orientation Meeting','D','M','MAG,WAG,WG'],['2026-10-13','20:00','21:00','Heads of Delegation Welcome Reception','D','M','MAG,WAG,WG'],['2026-10-13','21:00','21:40','Transport TC presidents','AH','T','MTC,WTC'],
-
-['2026-10-14','08:20','08:45','Transport MAG D-Judges','SA','T','MAG'],['2026-10-14','08:05','08:45','Transport MTC','HA','T','MTC'],['2026-10-14','08:45','09:25','Transport WTC','HA','T','WTC'],['2026-10-14','09:00','09:30','MAG D-Judges Briefing','J','M','MAG'],['2026-10-14','09:30','12:30','WTC Meeting','W','M','WTC'],['2026-10-14','10:00','11:50','MAG - Subdivision 1','F','P','MAG'],['2026-10-14','11:50','12:10','Break MAG','JL','F','MAG'],['2026-10-14','10:00','11:00','Medical & Mental Health Emergency (Action) Plans meeting','J','M','WG'],['2026-10-14','12:10','14:00','MAG - Subdivision 2','F','P','MAG'],['2026-10-14','13:25','13:50','Transport WAG D-Judges','SA','T','WAG'],['2026-10-14','14:00','16:00','Lunch MAG D-Judges + MTC','JL','F','MAG,MTC'],['2026-10-14','14:00','16:30','Meeting with WAG D-Judges','J','M','WAG'],['2026-10-14','16:00','17:50','MAG - Subdivision 3','F','P','MAG'],['2026-10-14','17:50','18:10','Dinner MAG D-Judges + MTC','JL','F','MAG,MTC'],['2026-10-14','16:30','17:10','Transport WTC','AH','T','WTC'],['2026-10-14','16:30','17:55','Transport WAG D-Judges','AS','T','WAG'],['2026-10-14','18:10','20:00','MAG - Subdivision 4','F','P','MAG'],['2026-10-14','20:00','20:40','Transport MTC','AH','T','MTC'],['2026-10-14','20:00','20:25','Transport MAG D-Judges','AS','T','MAG'],
-
-['2026-10-15','08:20','08:45','Transport MAG D-Judges','SA','T','MAG'],['2026-10-15','08:05','08:45','Transport MTC','HA','T','MTC'],['2026-10-15','09:00','09:30','MAG D-Judges Briefing','J','M','MAG'],['2026-10-15','09:15','09:55','Transport WTC','HA','T','WTC'],['2026-10-15','10:00','14:00','WTC Meeting','W','M','WTC'],['2026-10-15','10:00','11:50','MAG - Subdivision 5','F','P','MAG'],['2026-10-15','11:50','12:10','Lunch MAG D-Judges + MTC','JL','F','MAG,MTC'],['2026-10-15','12:10','14:00','MAG - Subdivision 6','F','P','MAG'],['2026-10-15','13:20','13:45','Transport WAG D-Judges','SA','T','WAG'],['2026-10-15','14:00','14:40','Transport MTC','AH','T','MTC'],['2026-10-15','14:00','14:25','Transport MAG D-Judges','AS','T','MAG'],['2026-10-15','14:00','15:30','WAG D-Judges Briefing + Fujitsu','J','M','WAG'],['2026-10-15','16:00','17:28','WAG - Subdivision 1','F','P','WAG'],['2026-10-15','17:28','17:50','Break WAG','JL','F','WAG'],['2026-10-15','17:50','19:18','WAG - Subdivision 2','F','P','WAG'],['2026-10-15','19:18','19:40','Dinner WAG D-Judges + WTC','JL','F','WAG,WTC'],['2026-10-15','19:40','21:08','WAG - Subdivision 3','F','P','WAG'],['2026-10-15','21:08','21:40','Transport WTC','AH','T','WTC'],['2026-10-15','21:08','21:25','Transport WAG D-Judges','AS','T','WAG'],
-
-['2026-10-16','07:50','08:15','Transport WAG D-Judges','SA','T','WAG'],['2026-10-16','07:35','08:15','Transport WTC','HA','T','WTC'],['2026-10-16','08:30','09:00','WAG D-Judges Briefing','J','M','WAG'],['2026-10-16','09:30','10:58','WAG - Subdivision 4','F','P','WAG'],['2026-10-16','10:58','11:15','Break WAG','JL','F','WAG'],['2026-10-16','11:00','12:30','MAG uniform distribution','S','O','MAG,MTC'],['2026-10-16','11:15','12:43','WAG - Subdivision 5','F','P','WAG'],['2026-10-16','12:43','13:00','Break WAG','JL','F','WAG'],['2026-10-16','10:25','11:25','Transport MTC','HA','T','MTC'],['2026-10-16','11:30','12:30','MTC Meeting','M','M','MTC'],['2026-10-16','13:00','14:28','WAG - Subdivision 6','F','P','WAG'],['2026-10-16','12:50','13:15','Transport MAG Judges','SA','T','MAG'],['2026-10-16','13:30','18:00','MAG Judges Briefing','J','M','MAG'],['2026-10-16','14:28','16:00','Lunch WAG D-Judges + WTC','JL','F','WAG,WTC'],['2026-10-16','16:00','17:28','WAG - Subdivision 7','F','P','WAG'],['2026-10-16','17:28','17:45','Break WAG','JL','F','WAG'],['2026-10-16','17:45','19:13','WAG - Subdivision 8','F','P','WAG'],['2026-10-16','19:13','19:50','Dinner WAG D-Judges + WTC','JL','F','WAG,WTC'],['2026-10-16','19:50','21:18','WAG - Subdivision 9','F','P','WAG'],['2026-10-16','21:18','21:30','Break WAG','JL','F','WAG'],['2026-10-16','21:30','22:58','WAG - Subdivision 10','F','P','WAG'],['2026-10-16','22:58','23:38','Transport WTC','AH','T','WTC'],['2026-10-16','22:58','22:23','Transport WAG D-Judges','AS','T','WAG'],
-
-['2026-10-17','09:00','09:30','MAG Judges Briefing','J','M','MAG'],['2026-10-17','10:00','11:50','MAG - Subdivision 1','F','Q','MAG'],['2026-10-17','11:00','12:30','WAG uniform distribution','S','O','WAG,WTC'],['2026-10-17','12:10','14:00','MAG - Subdivision 2','F','Q','MAG'],['2026-10-17','13:30','17:30','WAG Judges Briefing','J','M','WAG'],['2026-10-17','16:00','17:50','MAG - Subdivision 3','F','Q','MAG'],['2026-10-17','18:10','20:00','MAG - Subdivision 4','F','Q','MAG'],
-
-['2026-10-18','09:00','09:30','MAG Judges Briefing','J','M','MAG'],['2026-10-18','10:00','11:50','MAG - Subdivision 5','F','Q','MAG'],['2026-10-18','12:10','14:00','MAG - Subdivision 6','F','Q','MAG'],['2026-10-18','15:00','15:30','WAG Judges Briefing','J','M','WAG'],['2026-10-18','16:00','17:20','WAG - Subdivision 1','F','Q','WAG'],['2026-10-18','17:50','19:10','WAG - Subdivision 2','F','Q','WAG'],['2026-10-18','19:40','21:00','WAG - Subdivision 3','F','Q','WAG'],
-
-['2026-10-19','08:30','09:00','WAG Judges Briefing','J','M','WAG'],['2026-10-19','09:30','10:50','WAG - Subdivision 4','F','Q','WAG'],['2026-10-19','11:00','18:00','MTC Meeting','M','M','MTC'],['2026-10-19','11:05','12:25','WAG - Subdivision 5','F','Q','WAG'],['2026-10-19','12:40','14:00','WAG - Subdivision 6','F','Q','WAG'],['2026-10-19','16:00','17:20','WAG - Subdivision 7','F','Q','WAG'],['2026-10-19','17:35','18:55','WAG - Subdivision 8','F','Q','WAG'],['2026-10-19','19:35','20:55','WAG - Subdivision 9','F','Q','WAG'],['2026-10-19','21:10','22:30','WAG - Subdivision 10','F','Q','WAG'],
-
-['2026-10-20','11:00','16:00','Women Judges’ Day out','S','O','WAG'],['2026-10-20','16:30','18:30','WTC Meeting','W','M','WTC'],['2026-10-20','18:00','19:00','Men Judges’ Briefing and Draw for Team Final','J','M','MAG'],['2026-10-20','19:30','22:30','Men Team Final and Award Ceremony','F','C','MAG'],
-
-['2026-10-21','10:00','11:30','WG President Round Table','J','M','WG'],['2026-10-21','11:00','16:00','Men Judges’ Day out','S','O','MAG'],['2026-10-21','16:30','18:30','MTC Meeting and Men Team Final’s PCVR','M','M','MTC'],['2026-10-21','18:00','19:00','Women Judges’ Briefing and Draw for Team Final','J','M','WAG'],['2026-10-21','19:30','22:00','Women Team Final and Award Ceremony','F','C','WAG'],
-
-['2026-10-22','10:00','13:00','WTC Meeting and Women Team Final’s PCVR','W','M','WTC'],['2026-10-22','14:00','16:00','Women Round Table','J','M','WAG'],['2026-10-22','16:30','17:30','Women Athletes’ Meeting','J','M','WAG'],['2026-10-22','18:00','19:00','Men Judges’ Briefing','J','M','MAG'],['2026-10-22','19:30','22:00','Men All-Around Final and Award Ceremony','F','C','MAG'],
-
-['2026-10-23','13:30','15:30','MTC Meeting and Men All-Around Final’s PCVR','M','M','MTC'],['2026-10-23','14:00','15:30','Men Athletes’ Meeting','J','M','MAG'],['2026-10-23','15:30','17:00','Men Round Table','J','M','MAG'],['2026-10-23','17:30','19:00','Women Judges’ Briefing, Draw for All-Around Final, JEP instruction','J','M','WAG'],['2026-10-23','19:30','22:00','Women All-Around Final and Award Ceremony','F','C','WAG'],
-['2026-10-24','09:00','12:00','WTC Meeting and Women All-Around Final’s PCVR','W','M','WTC'],['2026-10-24','11:45','12:45','Men Judges’ Briefing and Draw for Apparatus Finals (FX, PH, SR)','J','M','MAG'],['2026-10-24','12:45','13:30','Women Judges’ Briefing and Draw for Apparatus Finals (VT, UB)','J','M','WAG'],['2026-10-24','14:00','18:00','Apparatus Finals (Day 1) and Award Ceremonies','F','C','MAG,WAG'],
-
-['2026-10-25','11:00','11:45','MTC Meeting','M','M','MTC'],['2026-10-25','11:00','12:00','WTC Meeting and Women Apparatus Final’s PCVR (VT, UB)','W','M','WTC'],['2026-10-25','11:45','12:45','Men Judges’ Briefing and Draw for Apparatus Finals (VT, PB, HB)','J','M','MAG'],['2026-10-25','12:45','13:30','Women Judges’ Briefing and Draw for Apparatus Finals (BB, FX)','J','M','WAG'],['2026-10-25','14:00','18:00','Apparatus Finals (Day 2) and Award Ceremonies','F','C','MAG,WAG'],['2026-10-25','20:00','','Farewell Banquet','S','O','MAG,WAG,WG,MTC,WTC'],
-
-['2026-10-26','','','Official Departure Day of the Delegations and D-Judges','','T','MAG,WAG,WG'],['2026-10-26','09:00','12:00','MTC Meeting, Men Apparatus Finals PCVR and Fujitsu meeting','M','M','MTC'],['2026-10-26','09:30','12:30','WTC Meeting, Women Apparatus Finals PCVR (BB, FX), Fujitsu meeting','W','M','WTC'],
-
+['2026-10-12','','','arrival of the WTC','H','T','WTC'],
+['2026-10-13','09:15','09:55','transport WTC','HA','T','WTC'],
+['2026-10-13','10:00','18:00','WTC Meeting','W','M','WTC'],
+['2026-10-13','18:00','18:40','transport WTC','AH','T','WTC'],
+['2026-10-14','08:45','09:25','transport WTC','HA','T','WTC'],
+['2026-10-14','09:30','12:30','WTC Meeting ','W','M','WTC'],
+['2026-10-14','16:30','17:10','transport WTC','AH','T','WTC'],
+['2026-10-15','09:15','09:55','transport WTC','HA','T','WTC'],
+['2026-10-15','10:00','14:00','WTC Meeting ','W','M','WTC'],
+['2026-10-15','19:18','19:40','Diner WAG D-Judges + WTC','JL','F','WAG,WTC'],
+['2026-10-15','21:08','21:40','transport WTC','AH','T','WTC'],
+['2026-10-16','07:35','08:15','transport WTC','HA','T','WTC'],
+['2026-10-16','14:28','16:00','Lunch WAG D-Judges + WTC','JL','F','WAG,WTC'],
+['2026-10-16','19:13','19:50','Diner WAG D-Judges + WTC','JL','F','WTC'],
+['2026-10-16','22:58','23:38','transport WTC','AH','T','WTC'],
+['2026-10-17','10:50','11:25','transport WTC','HA','T','WTC'],
+['2026-10-17','11:30','12:30','WTC Meeting ','W','M','WTC'],
+['2026-10-17','17:30','18:10','transport WTC','AH','T','WTC'],
+['2026-10-18','11:10','11:55','transport WTC','HA','T','WTC'],
+['2026-10-18','12:00','15:00','WTC Meeting ','W','M','WTC'],
+['2026-10-18','21:00','21:40','transport WTC','AH','T','WTC'],
+['2026-10-19','07:35','08:15','transport WTC','HA','T','WTC'],
+['2026-10-19','18:55','19:35','Diner WTC ','JL','F','WTC'],
+['2026-10-19','22:30','23:10','transport WTC','AH','T','WTC'],
+['2026-10-20','10:20','10:55','transport WTC','HS','T','WTC'],
+['2026-10-20','16:05','16:25','transport WTC','SA','T','WTC'],
+['2026-10-20','16:30','18:30','WTC Meeting ','W','M','WTC'],
+['2026-10-20','18:30','19:10','transport WTC','AH','T','WTC'],
+['2026-10-21','17:20','17:45','transport WTC','HA','T','WTC'],
+['2026-10-21','22:00','22:40','transport WTC','AH','T','WTC'],
+['2026-10-22','09:15','09:55','Transport WTC','HA','T','WTC'],
+['2026-10-22','10:00','13:00','WTC Meeting and Women Team Final’s PCVR','W','M','WTC'],
+['2026-10-22','17:30','18:10','Transport WTC','AH','T','WTC'],
+['2026-10-23','16:40','17:15','transport WTC','HA','T','WTC'],
+['2026-10-23','22:00','22:40','transport WTC','AH','T','WTC'],
+['2026-10-24','08:15','08:55','transport WTC','HA','T','WTC'],
+['2026-10-24','09:00','12:00','WTC Meeting and Women All-Around Final’s PCVR','W','M','WTC'],
+['2026-10-24','18:00','18:40','transport WTC','AH','T','WTC'],
+['2026-10-25','10:15','10:55','transport WTC','HA','T','WTC'],
+['2026-10-25','11:00','12:00','WTC Meeting and Women Apparatus Final’s PCVR (VT, UB)','W','M','WTC'],
+['2026-10-25','18:00','18:40','transport WTC','AH','T','WTC'],
+['2026-10-25','19:40','20:00','transport WTC MTC','HS','T','MTC,WTC'],
+['2026-10-25','23:00','23:40','transport WTC MTC','','T','MTC,WTC'],
+['2026-10-25','23:59','00:40','transport WTC MTC','','T','MTC,WTC'],
+['2026-10-26','08:45','09:25','Transport WTC','HA','T','WTC'],
+['2026-10-26','09:30','12:30','WTC Meeting, Women Apparatus Finals PCVR (BB, FX), Fujistu meeting','W','M','WTC'],
+['2026-10-26','12:30','13:10','Transport WTC','AH','T','WTC'],
 ['2026-10-27','','','Departure of the MTC and the WTC','H','T','MTC,WTC']
+
+
 ];
 const events=rows.map(r=>({date:r[0],start:r[1],end:r[2],title:r[3],location:L[r[4]]||r[4],type:T[r[5]]||r[5],aud:r[6]?r[6].split(','):[]}));
 const audienceOptions=['MAG','WAG','WG','MTC','WTC'];
