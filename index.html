@@ -527,7 +527,7 @@ window.addEventListener('resize',()=>{if(document.getElementById('floorplan')?.c
 function navigate(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');document.getElementById('nav').style.display='flex';document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('on',b.dataset.page===id));if(id==='favorites')renderFavorites();if(id!=='detail')previousPage=id;window.scrollTo(0,0)}
 function renderRoles(){document.getElementById('roleList').innerHTML=audienceOptions.map(a=>`<div class="role ${pendingAudiences.includes(a)?'selected':''}" data-audience="${a}"><b>${a}</b><span class="check"></span></div>`).join('');document.querySelectorAll('.role').forEach(r=>r.onclick=()=>{const a=r.dataset.audience;pendingAudiences=pendingAudiences.includes(a)?pendingAudiences.filter(x=>x!==a):[...pendingAudiences,a];renderRoles()})}
 function openAudiencePicker(){pendingAudiences=[...selectedAudiences];document.getElementById('audienceWarning').classList.remove('show');renderRoles();document.getElementById('audienceOverlay').classList.add('show')}function saveAudiences(){if(!pendingAudiences.length){document.getElementById('audienceWarning').classList.add('show');return}selectedAudiences=[...pendingAudiences];storeSelectedAudiences();document.getElementById('audienceOverlay').classList.remove('show');refresh()}function selectAllAudiences(){pendingAudiences=[...audienceOptions];renderRoles()}
-function renderDates(){const dates=[...new Set(events.map(e=>e.date))].sort();document.getElementById('dateSelector').innerHTML=dates.map(d=>{const p=dateShort.formatToParts(asDate(d)),w=(p.find(x=>x.type==='weekday')?.value||'').replace('.','').toUpperCase(),n=p.find(x=>x.type==='day')?.value||'',m=(p.find(x=>x.type==='month')?.value||'').replace('.','');return `<button class="date ${d===selectedDate?'on':''}" data-date="${d}">${w}<small>${n} ${m}</small></button>`}).join('');document.querySelectorAll('.date').forEach(b=>b.onclick=()=>{selectedDate=b.dataset.date;renderDates();renderSchedule()})}
+function renderDates(){const today=getRotterdamNowParts().date;const dates=[...new Set(events.map(e=>e.date))].filter(d=>d>=today).sort();if(selectedDate<today||!dates.includes(selectedDate))selectedDate=dates[0]||today;document.getElementById('dateSelector').innerHTML=dates.map(d=>{const p=dateShort.formatToParts(asDate(d)),w=(p.find(x=>x.type==='weekday')?.value||'').replace('.','').toUpperCase(),n=p.find(x=>x.type==='day')?.value||'',m=(p.find(x=>x.type==='month')?.value||'').replace('.','');return `<button class="date ${d===selectedDate?'on':''}" data-date="${d}">${w}<small>${n} ${m}</small></button>`}).join('');document.querySelectorAll('.date').forEach(b=>b.onclick=()=>{selectedDate=b.dataset.date;renderDates();renderSchedule()})}
 function eventCard(e,index){
   const favorite=isFavorite(index);
   const actionLabel=favorite?'Verwijder uit favorieten':'Toevoegen aan favorieten';
@@ -584,7 +584,13 @@ function renderHome(){
   const current=list.find(isNowRunning),currentMinutes=now.hour*60+now.minute;
   const upcoming=list.find(e=>e.date===now.date&&timeToMinutes(e.start)!==null&&timeToMinutes(e.start)>=currentMinutes);
   const first=current||upcoming||list[0];
-  const rest=list.filter(e=>e.index!==first.index);''
+  const firstStart=timeToMinutes(first.start);
+  const rest=list.filter(e=>{
+    if(e.index===first.index)return false;
+    const start=timeToMinutes(e.start);
+    if(firstStart!==null&&start!==null)return start>firstStart;
+    return true;
+  });
   const selectedIsToday=true;
   const status=current?'NU BEZIG':(selectedIsToday&&upcoming?'VOLGENDE':'GESELECTEERD');
   const heading=current?'Nu bezig in Rotterdam':(selectedIsToday&&upcoming?'Eerstvolgende activiteit':'Activiteit');
