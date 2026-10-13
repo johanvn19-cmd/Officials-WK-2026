@@ -584,7 +584,7 @@ function renderHome(){
   const current=list.find(isNowRunning),currentMinutes=now.hour*60+now.minute;
   const upcoming=list.find(e=>e.date===now.date&&timeToMinutes(e.start)!==null&&timeToMinutes(e.start)>=currentMinutes);
   const first=current||upcoming||list[0];
-  const rest=list.filter(e=>e.index!==first.index).slice(0,4);
+  const rest=list.filter(e=>e.index!==first.index);''
   const selectedIsToday=true;
   const status=current?'NU BEZIG':(selectedIsToday&&upcoming?'VOLGENDE':'GESELECTEERD');
   const heading=current?'Nu bezig in Rotterdam':(selectedIsToday&&upcoming?'Eerstvolgende activiteit':'Activiteit');
